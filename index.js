@@ -152,7 +152,7 @@ io.on('connection', (socket) => {
           }
           else{
             var sql ="INSERT INTO " + tableName_Com + " (IDMongodbComodo, IDMongodbUser, token) VALUES (?,?,?)";
-            var params =[message.idCom, message.idUs, message.token]
+            var params =[message.idCom, message.idUs, message.tk]
             db.run(sql, params, function (err, result) {
               if (err){
                 errors.push({error: true, msg: 'Erro de Insert Database: ' + err});
